@@ -17,14 +17,11 @@ int main(int argc, char *argv[])
     int i_first_wd;
     int size_first_wd;
 
-    //
     i = 0;
     while (test[i] == ' ' || test[i] == '\t')
     {
         i++;
     }
-
-
 
     i_first_wd = i,
     flag = 0;
@@ -52,8 +49,6 @@ int main(int argc, char *argv[])
         return 0;
     }
     
-
-
     i = i_first_wd;
     size_first_wd = 0;
     while (!(test[i] == '\t' || test[i] == ' '))
@@ -62,7 +57,6 @@ int main(int argc, char *argv[])
         i++;
     }
     
-
     if (count_word > 1)
     {
         while ((test[i] == '\t' || test[i] == ' '))
