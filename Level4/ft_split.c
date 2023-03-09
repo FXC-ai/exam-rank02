@@ -8,7 +8,6 @@ int check_separator (char c)
 
 int count_words(char *str)
 {
-
     int i;
     int count;
     int inside = 0;
@@ -29,8 +28,6 @@ int count_words(char *str)
         }
         i++;
     }
-    
-
     return count;
 }
 
@@ -44,7 +41,6 @@ int size_word(char *str, int ind)
         size++;
         ind++;
     }
-    
     return size;
 }
 
@@ -67,8 +63,6 @@ char *cpy_wd(char *str, int size_wd)
 
 char    **ft_split(char *str)
 {
-
-
     char **tab_char;
     int nbr_wd;
     int i;
@@ -97,7 +91,6 @@ char    **ft_split(char *str)
             i += size_wd;
             i_wd +=1;
         }
-
     }
     tab_char[i_wd] = NULL;
     return tab_char;   
@@ -105,21 +98,13 @@ char    **ft_split(char *str)
 
 int main (void)
 {
-
-    char *str = " abcfff\tdefg hi\tjk\n L    ";
-
-    printf("\n\n\nstr = \"%s\"\n", str);
-    printf("nbr de mots = %d\n", count_words(str));
-    printf("taille du mots a l indice %d : %d\n", 13, size_word(str, 13));
-    printf("test cpy_word %s\n\n", cpy_wd(&str[1], 6));
-
+    char *str = "    premier \n\n\n\n deuxieme troisieme  \t\t quatrieme   ";
+    
     char **tab = ft_split(str);
-
     int i = 0;
-
     while (tab[i])
     {
-        printf(" Result = %s |", tab[i]);
+        printf("Result %d = %s\n", i, tab[i]);
         i++;
     }
     
